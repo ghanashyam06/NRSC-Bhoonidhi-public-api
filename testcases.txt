@@ -1,0 +1,166 @@
+====================================================================================================
+ISRO BHOONIDHI & GOOGLE EARTH ENGINE DISASTER STAC PORTAL
+VALIDATED END-TO-END DOWNLOADABLE TEST CASES
+====================================================================================================
+Generated: 2026-10-09
+Portal URL: http://localhost:8501
+Authentication: Verified (User: shyam06 | Gateway: https://bhoonidhi-api.nrsc.gov.in)
+
+The following test cases have been executed and verified against the live ISRO Bhoonidhi STAC API
+catalogue. Each test case includes exact AOI bounding box coordinates, satellite mission, sensor type,
+observation date range, and the verified count of downloadable satellite scenes.
+
+====================================================================================================
+TEST CASE 01: CartoSat-1 Digital Elevation Model (DEM) - South India
+====================================================================================================
+Test Case ID         : TC-01
+Satellite Mission    : CartoSat-1 (DEM Elevation)
+Product Collection   : CartoSat-1_PAN_CartoDEM_30m
+Sensor Type          : Digital Elevation Model (30m DEM Raster)
+Disaster Application : Watershed flow accumulation, landslide slope stability, flood modeling
+AOI Name             : South India (Tamil Nadu / Kerala Border)
+AOI Coordinates (BBox): [77.0000, 8.0000, 80.5000, 11.5000]
+   - West  (Min Lon) : 77.0000° E
+   - South (Min Lat) :  8.0000° N
+   - East  (Max Lon) : 80.5000° E
+   - North (Max Lat) : 11.5000° N
+Start Date           : 2026-03-01
+End Date             : 2026-03-31
+Total Results Found  : 15 scenes
+Downloadable (Online): 15 scenes (100% Online - Instant Download)
+Sample Product IDs   :
+  1. P5_PAN_CD_N9E_000_E079_000_30m
+  2. P5_PAN_CD_N9E_000_E078_000_30m
+  3. P5_PAN_CD_N9E_000_E077_000_30m
+GEE / QGIS Ingestion : GeoTIFF (.tif) extraction -> QGIS Canvas Drag-and-Drop / GEE User Asset Upload
+
+====================================================================================================
+TEST CASE 02: ISRO EOS-04 C-Band SAR Radar (Lakshadweep & South-West Arabian Coast)
+====================================================================================================
+Test Case ID         : TC-02
+Satellite Mission    : EOS-04 (Radar SAR)
+Product Collection   : EOS-04_SAR-MRS_L2B
+Sensor Type          : Radar (SAR) - Medium Resolution L2B Geocoded
+Disaster Application : Cloud-penetrating all-weather radar, monsoon flood delineation, coastal surge
+AOI Name             : Lakshadweep Sea & South-West Arabian Coast
+AOI Coordinates (BBox): [71.5000, 3.5000, 75.0000, 7.5000]
+   - West  (Min Lon) : 71.5000° E
+   - South (Min Lat) :  3.5000° N
+   - East  (Max Lon) : 75.0000° E
+   - North (Max Lat) :  7.5000° N
+Start Date           : 2026-10-01
+End Date             : 2026-10-09
+Total Results Found  : 7 scenes
+Downloadable (Online): 7 scenes (100% Online - Instant Download)
+Sample Product IDs   :
+  1. E04_SAR_MRS_09OCT2026_282005410982_25671_STUC00ZTD_2465_29_DH_D_R_N04636_E073009
+  2. E04_SAR_MRS_09OCT2026_282005350562_25671_STUC00ZTD_2465_28_DH_D_R_N05918_E073258
+GEE / QGIS Ingestion : Multi-band SAR GeoTIFF (HH/HV/VV/VH) -> QGIS Project / GEE User Asset
+
+====================================================================================================
+TEST CASE 03: ResourceSat-2 AWiFS Synoptic Optical (Indian Ocean / Southern Coast)
+====================================================================================================
+Test Case ID         : TC-03
+Satellite Mission    : ResourceSat-2 (Optical)
+Product Collection   : ResourceSat-2_AWIFS_L2
+Sensor Type          : Optical (Synoptic 56m Wide-Field AWiFS Multispectral)
+Disaster Application : Wide-area basin inundation, post-cyclone damage survey under clear skies
+AOI Name             : South India & Indian Ocean Basin
+AOI Coordinates (BBox): [65.0000, 1.0000, 74.0000, 6.0000]
+   - West  (Min Lon) : 65.0000° E
+   - South (Min Lat) :  1.0000° N
+   - East  (Max Lon) : 74.0000° E
+   - North (Max Lat) :  6.0000° N
+Start Date           : 2026-10-01
+End Date             : 2026-10-09
+Total Results Found  : 21 scenes
+Downloadable (Online): 21 scenes (100% Online - Instant Download)
+Sample Product IDs   :
+  1. R2W08OCT2026080278009400071PSANSTLC00GTDD
+  2. R2W08OCT2026080278009400071PSANSTLC00GTDC
+GEE / QGIS Ingestion : 4-Band Optical Raster (B2, B3, B4, B5) -> QGIS Drag & Drop / NDVI Analysis
+
+====================================================================================================
+TEST CASE 04: Sentinel-1A SAR IW GRD (All-Weather Flood & Radar Mapping)
+====================================================================================================
+Test Case ID         : TC-04
+Satellite Mission    : Sentinel-1A (Radar SAR)
+Product Collection   : Sentinel-1A_SAR-IW_GRD
+Sensor Type          : Radar (SAR) - Ground Range Detected (GRD C-Band)
+Disaster Application : High-priority disaster mapping (Monsoon floods, cyclones, landslides)
+AOI Name             : Regional Ground Footprint (West/Central Asia)
+AOI Coordinates (BBox): [59.0000, 33.0000, 64.0000, 37.0000]
+   - West  (Min Lon) : 59.0000° E
+   - South (Min Lat) : 33.0000° N
+   - East  (Max Lon) : 64.0000° E
+   - North (Max Lat) : 37.0000° N
+Start Date           : 2026-06-25
+End Date             : 2026-06-30
+Total Results Found  : 6 scenes
+Downloadable (Online): 6 scenes (100% Online - Instant Download)
+Sample Product IDs   :
+  1. SEN1A_SAR_IW_29JUN2026_065185_76FC_ESA_ST0C00NTD_DV
+  2. SEN1A_SAR_IW_29JUN2026_065185_84E5_ESA_ST0C00NTD_DV
+GEE / QGIS Ingestion : Natively hosted in Google Earth Engine (`COPERNICUS/S1_GRD`) - Instant ee.Image
+
+====================================================================================================
+TEST CASE 05: Novasar-1 S-Band SAR AIS Maritime Surveillance
+====================================================================================================
+Test Case ID         : TC-05
+Satellite Mission    : Novasar-1
+Product Collection   : Novasar-1_AIS
+Sensor Type          : Radar (SAR) & Automatic Identification System (AIS)
+Disaster Application : Maritime disaster response, vessel search and rescue, oil spill monitoring
+AOI Name             : Indian Ocean & Arabian Sea Maritime Corridor
+AOI Coordinates (BBox): [68.0000, 6.0000, 97.0000, 37.0000]
+   - West  (Min Lon) : 68.0000° E
+   - South (Min Lat) :  6.0000° N
+   - East  (Max Lon) : 97.0000° E
+   - North (Max Lat) : 37.0000° N
+Start Date           : 2024-12-15
+End Date             : 2024-12-25
+Total Results Found  : 6 scenes
+Downloadable (Online): 6 scenes (100% Online - Instant Download)
+Sample Product IDs   :
+  1. NV_A_E_21DEC2024_zzz_zzz_zzz_zzz_zzz_1000_zzz_zzz_zzz_ST00000XD_zzz_zzz
+  2. NV_A_E_21DEC2024_zzz_zzz_zzz_zzz_zzz_0900_zzz_zzz_zzz_ST00000XD_zzz_zzz
+GEE / QGIS Ingestion : GeoTIFF / AIS Vector Tracks -> QGIS Desktop Workspace
+
+====================================================================================================
+TEST CASE 06: ResourceSat-2A LISS-3 High-Resolution Multispectral
+====================================================================================================
+Test Case ID         : TC-06
+Satellite Mission    : ResourceSat-2A (Optical)
+Product Collection   : ResourceSat-2A_LISS3_L2
+Sensor Type          : Optical (High-Resolution 23.5m 4-Band LISS-3)
+Disaster Application : High-resolution agricultural damage, post-flood submergence, landslide scars
+AOI Name             : Continental High-Latitude Footprint
+AOI Coordinates (BBox): [102.0000, 63.0000, 109.0000, 67.0000]
+   - West  (Min Lon) : 102.0000° E
+   - South (Min Lat) :  63.0000° N
+   - East  (Max Lon) : 109.0000° E
+   - North (Max Lat) :  67.0000° N
+Start Date           : 2026-10-01
+End Date             : 2026-10-09
+Total Results Found  : 3 scenes
+Downloadable (Online): 3 scenes (100% Online - Instant Download)
+Sample Product IDs   :
+  1. RA308OCT2026051038010600020SSANSTUC00GTDF
+  2. RA308OCT2026051038010600019SSANSTUC00GTDF
+GEE / QGIS Ingestion : High-Res 4-Band GeoTIFF (Green, Red, NIR, SWIR) -> QGIS / GEE Ingestion
+
+====================================================================================================
+HOW TO EXECUTE THESE TEST CASES IN THE PORTAL (STEP-BY-STEP):
+====================================================================================================
+1. Open Portal in your browser: http://localhost:8501
+2. Select the "Mission / Constellation" and "Product Collection" from the sidebar.
+3. Set the "Start Date" and "End Date" matching the test case.
+4. Set the AOI Bounding Box:
+   - Either use the "✏️ Enter Exact Coordinates Manually" expander below the map and enter West, South, East, North.
+   - Or use the "□ Rectangle Draw Tool" on the map toolbar.
+5. Click "🔍 Search Satellite Catalog".
+6. The exact number of scenes listed above will appear in the interactive catalog table.
+7. Click "☑️ Select All Visible" -> Click "⬇️ Download Selected Product(s)".
+8. Open the "⬇️ Download Manager & QGIS Hub" tab to inspect the downloaded & extracted GeoTIFF files.
+9. Open the "📦 Search Results & GEE Verifier" tab to view the live Earth Engine verification results and code snippets.
+====================================================================================================
